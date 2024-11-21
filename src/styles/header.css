@@ -1,0 +1,98 @@
+/* Header.css */
+.header {
+    background-color: #f1692f;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;  /* Đặt ở vị trí bên trái */
+    z-index: 9999; /* Đặt header lên trên các phần tử khác */
+}
+/* Chỉ mục tiêu đề trên header viết hoa */
+.navbar-nav .nav-link {
+    text-transform: uppercase; /* Viết hoa */
+    color: white!important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: Black!important;
+}
+
+    /* Nội dung trong dropdown giữ nguyên chữ */
+.dropdown-menu .dropdown-item {
+    text-transform: none; /* Không viết hoa */
+}
+
+
+.header h1 {
+    font-size: 2rem;
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Hiển thị dropdown khi hover */
+    margin-top: 0;  /* Điều chỉnh vị trí dropdown */
+}
+
+/* Điều chỉnh thêm các kiểu dáng */
+.nav-item.dropdown .dropdown-menu {
+    transition: all 0.3s ease; /* Hiệu ứng dropdown */
+}
+
+.btn-primary {
+    background-color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: black;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Thời gian chuyển đổi mượt */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút đăng nhập hover */
+.btn-primary:hover {
+    background-color: #f1692f;
+    transform: translateY(-3px); /* Nổi lên 3px */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Thêm bóng */
+}
+
+/* Biểu tượng tìm kiếm */
+.search-icon {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-icon i {
+    transition: color 0.3s ease;
+}
+
+/* Biểu tượng tìm kiếm hover */
+.search-icon i:hover {
+    color: #ffcc00; /* Màu vàng khi hover */
+}
+
+/* Căn chỉnh phần bên phải (tìm kiếm và đăng nhập) */
+.right-section {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+
+/* Container chứa banner */
+.banner-container {
+    width: 100%;
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    max-height: 400px; /* Giới hạn chiều cao ảnh */
+    overflow: hidden; /* Ẩn phần ảnh bị tràn */
+    margin-top: 148px; /* Thụt xuống khoảng cách bằng chiều cao của header */
+}
+
+/* Ảnh banner */
+.banner-image {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Tự động điều chỉnh chiều cao dựa trên tỷ lệ ảnh */
+    object-fit: cover; /* Giữ tỷ lệ ảnh và cắt phần dư thừa nếu cần */
+}
+

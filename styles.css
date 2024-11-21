@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+header .navbar {
+    background-color: orange;
+}
+section {
+    padding: 60px 0;
+}

@@ -1,0 +1,170 @@
+/* Đảm bảo Row và Col luôn co giãn */
+.align-items-stretch {
+    display: flex;
+}
+
+/* Đảm bảo cột sự kiện và bài viết cùng chiều cao */
+.events-column, .posts-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phần danh sách sự kiện co giãn với phần cột */
+.events-list {
+    flex-grow: 1;
+    overflow-y: auto; /* Nếu danh sách quá dài, tự động cuộn */
+}
+
+/* Phân trang nằm ở cuối cột */
+.pagination {
+    margin-top: auto;
+}
+.form-container {
+    padding: 0 70px; /* Đẩy vào 2 bên trái và phải 30px */
+}
+
+
+.eventSection {
+    padding: 0 120px;
+    padding-top: 40px;
+}
+
+.events-column {
+    border-right: 1px solid #ddd;
+}
+
+.bg-orange {
+    background-color: #ff6600;
+    height: 300px;
+    border-radius: 20px;
+}
+
+/* Cột bài viết */
+.posts-column {
+    padding-left: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Chừa khoảng trống cho icon bên phải */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+.categories {
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: 500;
+    gap: 15px; /* Khoảng cách giữa các mục */
+    text-align: center;
+    padding-top: 10px;
+}
+
+.category-link {
+    color: #f1692f!important;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.category-link:hover {
+    text-decoration: underline;
+}
+
+/* Đường gạch ngăn dài bằng chữ */
+.category-link.with-divider::after {
+    content: "";
+    position: absolute;
+    right: -10px; /* Khoảng cách giữa vạch và chữ */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1em; /* Chiều cao bằng với chữ */
+    background-color: #ccc; /* Màu của vạch ngăn */
+}
+
+/* Bỏ vạch cuối cùng */
+.category-link:last-child::after {
+    display: none;
+}
+.post-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Định dạng Card */
+.posts-list .card {
+    border: 1px solid #ddd; /* Đường viền card */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    background-color: #fff; /* Màu nền */
+}
+
+.posts-list .card-img {
+    border-radius: 8px; /* Bo góc cho ảnh */
+}
+
+/* Tiêu đề bài viết */
+.posts-list .post-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Nội dung bài viết */
+.posts-list .post-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Nút "Xem thêm" */
+.posts-list .read-more {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0;
+}
+
+.posts-list .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Ảnh đáp ứng */
+.responsive-image-container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
+    max-width: 120px; /* Giới hạn kích thước ảnh lớn nhất */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn phần dư thừa nếu cần */
+    border-radius: 8px; /* Bo góc */
+}
+
+.responsive-image {
+    width: 100%; /* Chiều rộng đầy đủ */
+    height: auto; /* Chiều cao tự động, giữ nguyên tỷ lệ */
+    object-fit: cover; /* Đảm bảo ảnh vừa khung mà không méo */
+    border-radius: 8px; /* Bo góc */
+}
+
+

@@ -1,5 +1,112 @@
+.search-btn{
+    margin-top: 170px!important;
+    width: 65%;
+    border-radius: 15px!important;
+}
+
+.categories {
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: 500;
+    gap: 15px; /* Khoảng cách giữa các mục */
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.category-link {
+    color: #f1692f!important;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.category-link:hover {
+    text-decoration: underline;
+}
+
+/* Đường gạch ngăn dài bằng chữ */
+.category-link.with-divider::after {
+    content: "";
+    position: absolute;
+    right: -10px; /* Khoảng cách giữa vạch và chữ */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1em; /* Chiều cao bằng với chữ */
+    background-color: #ccc; /* Màu của vạch ngăn */
+}
+
+/* Bỏ vạch cuối cùng */
+.category-link:last-child::after {
+    display: none;
+}
+
+.breadcrumb-container {
+    background-color: #f6f6f6; /* Màu nền nhẹ */
+    padding: 10px 20px; /* Khoảng cách */
+}
+
+.breadcrumb {
+    margin-left: 175px;
+    width: 100%;
+}
+.breadcrumb-item  a{
+    text-decoration: none;
+    color: #f1692f; /* Màu cam */
+    font-weight: bold;
+}
+.breadcrumb-item.active {
+    color: #f1692f; /* Màu cam cho phần hiện tại */
+    font-weight: bold;
+}
+
+.collapsible {
+    width: 100%; /* Chiều rộng của collapsible */
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+.collapsible-button {
+    background-color: #ccc; /* Màu nền nút */
+    color: #000000;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.collapsible-button:hover {
+    background-color: #f1692f;
+}
+
+.collapsible-content {
+    overflow: hidden;
+    max-height: 0; /* Ẩn nội dung ban đầu */
+    transition: max-height 0.3s ease-out; /* Hiệu ứng ẩn/hiện mượt mà */
+}
+
+.collapsible-content.open {
+    max-height: 500px; /* Chỉ ra chiều cao tối đa khi mở */
+}
+
+.collapsible-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.collapsible-content li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
 article {
-    margin-top: 110px;
+    margin-top: 30px;
     margin-left: 175px;
     display: flex;
     flex-direction: row;
@@ -18,7 +125,15 @@ article {
     line-height: 18.75px;
 }
 
-.content h2, .content h3 {
+.content h2{
+    color: #f1692f;
+    border-bottom: #f1692f 5px solid;
+    font-family: Roboto;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.content h3 {
     color: #333;
     font-family: Roboto;
     font-size: 22px;
@@ -74,6 +189,10 @@ article {
 
 }
 
+.solution-art {
+    background-color: #f1692f;
+}
+
 .related-article-item {
     display: inline-block;
     margin: 0 10px;
@@ -86,6 +205,22 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.solution-art{
+    background-color: #f1692f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.solution-art h2{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .related-article-item img {
     width: 100%;
     border-radius: 8px;
@@ -93,4 +228,81 @@ article {
     height: 166.23px;
     top: 2431.98px;
     left: 346px;
+}
+
+.courses {
+    width: 300px;
+    margin: 30px auto;
+}
+.courses h2 {
+    color: #ff6600;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+}
+.courses h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ff6600;
+    margin-top: 5px;
+}
+.course-list {
+    list-style: none;
+    padding: 0;
+}
+.course-list li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #000;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-group input,
+.form-group select {
+    width: 80%; /* Chiếm 80% chiều rộng */
+    margin: 0 auto; /* Căn giữa */
+    display: block; /* Đảm bảo nó là block để căn chỉnh được */
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: 0 0 3px #d35400;
+}
+
+.submit-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 80%; /* Chiếm 80% chiều rộng */
+    margin: 10px auto 0;
+    display: block;
+}
+
+.submit-button:hover {
+    background-color: #333;
 }

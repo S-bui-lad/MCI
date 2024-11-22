@@ -1,0 +1,70 @@
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Mặc định là 4 cột */
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-logo p {
+    margin: 5px 0;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #f1692f;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    display: inline-block;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-section p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Media Query cho màn hình nhỏ (điện thoại) */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột */
+    }
+
+    .footer-section {
+        padding: 10px 0;
+        border-bottom: 1px solid #444; /* Thêm đường kẻ ngăn cách các phần */
+    }
+
+    .footer-section:last-child {
+        border-bottom: none; /* Bỏ đường kẻ ở phần cuối cùng */
+    }
+
+    .footer-logo img {
+        max-width: 100%; /* Đảm bảo hình ảnh co giãn theo chiều rộng */
+    }
+}

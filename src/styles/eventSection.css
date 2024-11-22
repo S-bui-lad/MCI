@@ -19,16 +19,62 @@
 .pagination {
     margin-top: auto;
 }
-.form-container {
-    padding: 0 70px; /* Đẩy vào 2 bên trái và phải 30px */
-}
-
 
 .eventSection {
-    padding: 0 120px;
+    padding: 0 30px;
     padding-top: 40px;
 }
 
+.event-name{
+    color: #f1692f;
+    border-bottom: 5px solid #f1692f;
+    padding-bottom: 15px;
+}
+
+/* Cấu trúc mặc định cho màn hình máy tính */
+@media (min-width: 768px) {
+    .posts-column, .events-column {
+        flex: 0 0 50%; /* Mỗi cột chiếm 50% chiều rộng */
+    }
+
+    /* Hiển thị bài viết dưới dạng danh sách trên máy tính */
+    .posts-list.d-sm-block {
+        display: block;
+    }
+
+    /* Ẩn carousel trên máy tính */
+    .posts-list.d-none.d-sm-block {
+        display: none;
+    }
+}
+
+/* Cấu trúc responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .posts-column, .events-column {
+        flex: 0 0 100%; /* Mỗi cột chiếm 100% chiều rộng */
+        max-width: 100%;
+    }
+
+    .posts-column {
+        order: -1; /* Đưa phần bài viết lên trên khi màn hình nhỏ */
+    }
+
+    /* Hiển thị carousel trên màn hình nhỏ */
+    .posts-list.d-sm-block {
+        display: none;
+    }
+
+    .posts-list.d-block.d-sm-none {
+        display: block;
+    }
+}
+
+/* Giữ ảnh và nội dung trong Card khi ở chế độ responsive */
+.card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .events-column {
     border-right: 1px solid #ddd;
 }
@@ -165,6 +211,12 @@
     height: auto; /* Chiều cao tự động, giữ nguyên tỷ lệ */
     object-fit: cover; /* Đảm bảo ảnh vừa khung mà không méo */
     border-radius: 8px; /* Bo góc */
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 300px;
 }
 
 

@@ -1,7 +1,7 @@
 /* Header.css */
 .header {
-    background-color: #f1692f;
-    padding: 20px;
+    background-color: #f1692f!important;
+    padding: 0 20px!important;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -18,6 +18,7 @@
 .navbar-nav .nav-link:hover {
     color: Black!important;
 }
+
 
     /* Nội dung trong dropdown giữ nguyên chữ */
 .dropdown-menu .dropdown-item {
@@ -64,9 +65,9 @@
     font-weight: bold;
 }
 
-.search-icon i {
-    transition: color 0.3s ease;
-}
+/*.search-icon i {*/
+/*    transition: color 0.3s ease;*/
+/*}*/
 
 /* Biểu tượng tìm kiếm hover */
 .search-icon i:hover {
@@ -79,20 +80,23 @@
     gap: 10px; /* Khoảng cách giữa các phần tử */
 }
 
-
-/* Container chứa banner */
-.banner-container {
-    width: 100%;
-    height: auto; /* Tự động điều chỉnh chiều cao */
-    max-height: 400px; /* Giới hạn chiều cao ảnh */
-    overflow: hidden; /* Ẩn phần ảnh bị tràn */
-    margin-top: 148px; /* Thụt xuống khoảng cách bằng chiều cao của header */
+/* Đẩy menu sang trái và căn chỉnh phần tử trên màn hình lớn */
+@media (min-width: 992px) {
+    .navbar-nav {
+        margin-left: 0;
+    }
+    .right-section {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    .search-icon {
+        margin-right: 10px; /* Giãn cách giữa icon tìm kiếm và nút đăng nhập */
+    }
 }
 
-/* Ảnh banner */
-.banner-image {
-    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
-    height: auto; /* Tự động điều chỉnh chiều cao dựa trên tỷ lệ ảnh */
-    object-fit: cover; /* Giữ tỷ lệ ảnh và cắt phần dư thừa nếu cần */
+.link-nav{
+    color: #ffffff;
+    text-decoration: none;
 }
 

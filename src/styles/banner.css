@@ -1,0 +1,15 @@
+/* Container chứa banner */
+.banner-container {
+    width: 100%;
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    max-height: 400px; /* Giới hạn chiều cao ảnh */
+    overflow: hidden; /* Ẩn phần ảnh bị tràn */
+    margin-top: 110px; /* Thụt xuống khoảng cách bằng chiều cao của header */
+}
+
+/* Ảnh banner */
+.banner-image {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Tự động điều chỉnh chiều cao dựa trên tỷ lệ ảnh */
+    object-fit: cover; /* Giữ tỷ lệ ảnh và cắt phần dư thừa nếu cần */
+}

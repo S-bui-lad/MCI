@@ -1,19 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
-import EventSection from './components/EventSection';
-import MemberSection from './components/MemberSection';
-import TrainingPrograms from './components/TrainingPrograms';
-import Footer from './components/Footer';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BlogPage from './pages/blogPage';
+import BlogDetailPage from './pages/blogDetail';
 function App() {
   return (
-      <div>
-        <Header />
-        <EventSection />
-        <MemberSection />
-        <TrainingPrograms />
-        <Footer />
-      </div>
+      <Router>
+          <Routes>
+              <Route path="/" element={<BlogPage />} />
+              <Route path="/blog" element={<BlogDetailPage />} />
+          </Routes>
+      </Router>
   );
 }
 

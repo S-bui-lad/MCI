@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/eventSection.css'
-import { Row, Col, Card, Button, Pagination } from "react-bootstrap";
+import { Row, Col, Card, Button, Pagination, Carousel } from "react-bootstrap";
 
 function EventSection() {
     return (
@@ -9,7 +9,7 @@ function EventSection() {
             <Row>
                 {/* Cột Sự kiện */}
                 <Col md={6} className="events-column">
-                    <h4 className="mb-3">Sự kiện của MCI</h4>
+                    <h4 className="mb-3 event-name">Sự kiện của MCI</h4>
                     <div className="events-list">
                         {[...Array(3)].map((_, idx) => (
                             <Card key={idx} className="mb-3 bg-orange">
@@ -56,10 +56,47 @@ function EventSection() {
                             </React.Fragment>
                         ))}
                     </div>
+                    <div className="posts-list d-sm-none">
+                        <Carousel>
+                            {[...Array(5)].map((_, idx) => (
+                                <Carousel.Item key={idx}>
+                                    <Card key={idx} className="mb-3 p-3" style={{ display: "flex", alignItems: "center" }}>
+                                        <Row className="align-items-center">
+                                            {/* Ảnh bên trái */}
+                                            <Col xs="auto">
+                                                <div className="responsive-image-container">
+                                                    <Card.Img
+                                                        src="https://via.placeholder.com/150"
+                                                        className="responsive-image"
+                                                        alt="Card Image"
+                                                    />
+                                                </div>
+                                            </Col>
+                                            {/* Nội dung bên phải */}
+                                            <Col>
+                                                <Card.Body className="p-0">
+                                                    <Card.Title className="post-title mb-2">
+                                                        Bạn Nguyễn Quang Hưng - Học DATA 1A và quá trình...
+                                                    </Card.Title>
+                                                    <Card.Text className="post-text mb-2">
+                                                        Với sự tìm hiểu từ cấp 3, em thấy ngành công nghệ và phần mềm rất thú vị...
+                                                    </Card.Text>
+                                                    <Button variant="link" className="read-more">
+                                                        Xem thêm
+                                                    </Button>
+                                                </Card.Body>
+                                            </Col>
+                                        </Row>
+                                    </Card>
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
 
-                    <div className="posts-list">
+                    {/* Hiển thị dưới dạng list cho máy tính */}
+                    <div className="posts-list d-none d-sm-block">
                         {[...Array(5)].map((_, idx) => (
-                            <Card key={idx} className="mb-3 p-3" style={{display: "flex", alignItems: "center"}}>
+                            <Card key={idx} className="mb-3 p-3" style={{ display: "flex", alignItems: "center" }}>
                                 <Row className="align-items-center">
                                     {/* Ảnh bên trái */}
                                     <Col xs="auto">
@@ -78,8 +115,7 @@ function EventSection() {
                                                 Bạn Nguyễn Quang Hưng - Học DATA 1A và quá trình...
                                             </Card.Title>
                                             <Card.Text className="post-text mb-2">
-                                                Với sự tìm hiểu từ cấp 3, em thấy ngành công nghệ và phần mềm rất thú
-                                                vị...
+                                                Với sự tìm hiểu từ cấp 3, em thấy ngành công nghệ và phần mềm rất thú vị...
                                             </Card.Text>
                                             <Button variant="link" className="read-more">
                                                 Xem thêm
